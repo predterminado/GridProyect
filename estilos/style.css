@@ -244,6 +244,9 @@ span {
     border-radius: 5px;
     background-color: rgb(224, 251, 226);
 }
+.contact-container__input:focus-visible {
+    outline: none;
+}
 .contact-container label {
     font-size: 1.5rem;
 }
