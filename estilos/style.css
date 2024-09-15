@@ -97,6 +97,7 @@ input[type=checkbox] {
 .img-container {
     width: 90%;
     margin: 40px auto;
+    animation: init 1s cubic-bezier(.12,.92,.65,.22)  1  both;
 }
 .img__main-section {
     max-width: 100%;
@@ -106,6 +107,7 @@ input[type=checkbox] {
     font-size: 2.1rem;
     padding: 0 30px;
     text-wrap: balance;
+    animation: init 1s cubic-bezier(.12,.92,.65,.22)  1  both;
 }
 h1 {
     text-align: center;
@@ -163,6 +165,10 @@ span {
 }
 .skills-container {
     margin-left: 25px;
+    animation: aparece 1s linear    both;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
 }
 .cont-lang {
     display: flex;
@@ -411,4 +417,19 @@ footer{
         border-bottom-right-radius: 0;
     }
 }
-
+@keyframes init {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes aparece {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
