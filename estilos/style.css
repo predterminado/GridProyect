@@ -281,7 +281,7 @@ footer{
 
 /*................ MEDIA HEADER ZONE..............*/
 
-@container headerr (min-width: 431px) {
+@media (min-width: 431px) {
     .menu-bar {
         display: none;
     }
@@ -298,7 +298,25 @@ footer{
         width: 100px;
     }
     .header-container {
-        height: 50px;
+        min-height: 50px;
+        animation: nav-bar-animation  linear    both;
+        animation-timeline: scroll();
+        animation-range-start:contain 0% ;
+        animation-range-end: cover 15%;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    @keyframes nav-bar-animation {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 0.7;
+        }
     }
     
 }
@@ -393,3 +411,4 @@ footer{
         border-bottom-right-radius: 0;
     }
 }
+
