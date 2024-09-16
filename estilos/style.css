@@ -185,6 +185,7 @@ span {
     min-height: 100vh;
     container-type: inline-size;
     container-name: portfolio;
+    
 }
 .portfolio-section h2, h4{
     font-size: 3rem;
@@ -212,7 +213,10 @@ span {
     overflow: hidden;
     text-overflow: ellipsis;
     transition: 0.5s;
-
+    animation: aparece 1s linear    both;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 20%;
 }
 .container-portfolio__item h3 {
     color: var(--color-font);
@@ -222,6 +226,10 @@ span {
     margin-bottom: 150px;
     container-type: inline-size; 
     container-name: contact;
+    animation: aparece 1s linear    both;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 20%;
 }
 .contact-container {
     display: flex;
